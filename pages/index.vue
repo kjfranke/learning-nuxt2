@@ -1,8 +1,5 @@
 <template>
   <div>
-    <nuxt-link to="/sprite">
-      Sprite
-    </nuxt-link>
     <p>
       props: testProps = {{ testProps }}
     </p>

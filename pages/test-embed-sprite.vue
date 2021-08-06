@@ -1,0 +1,54 @@
+<template>
+  <div>
+    <div>
+      Sprite:
+      <br>
+      <svg>
+        <symbol id="symbol-arrow" viewBox="0 0 6.8 13.3">
+          <path d="m1.5 0 5 6c.3.3.3.8.1 1.2l-.1.1-5 6-1.5-1.3 4.5-5.4-4.5-5.4z" />
+        </symbol>
+        <symbol id="symbol-calendar" viewBox="0 0 447.2 438.3">
+          <path d="M91.6,86.5V18.8C91.6,8.4,100,0,110.4,0c10.4,0,18.8,8.4,18.8,18.8v67.7c0,10.4-8.4,18.8-18.8,18.8S91.6,96.9,91.6,86.5z M447.1,54.7v383.6H0L0,54.7h85.5V55c-7.9,7-12.8,17-12.8,28.3c0,20.8,16.8,37.7,37.7,37.7c20.8,0,37.7-16.9,37.7-37.7 c0-11.3-4.9-21.3-12.7-28.3v-0.3h176.4V55C304,62,299,72,299,83.3c0,20.8,17,37.7,37.8,37.7c20.8,0,37.7-16.9,37.7-37.7 c0-11.3-5-21.3-12.7-28.3v-0.3H447.1z M416.1,150.5H32.9v254.7h383.2V150.5z M317.9,86.5V18.8c0-10.4,8.4-18.8,18.8-18.8 c10.4,0,18.8,8.4,18.8,18.8v67.7c0,10.4-8.4,18.8-18.8,18.8C326.4,105.3,317.9,96.9,317.9,86.5z M316.6,253.9l0.1,47.9h-48v-47.9 H316.6L316.6,253.9z M316.6,181.9l0.1,47.8h-48v-47.8H316.6L316.6,181.9z M316.6,323.9l0.1,47.9h-48v-47.9H316.6L316.6,323.9z M384,229.7h-47.9v-47.8H384V229.7z M384,253.9v47.9h-47.9v-47.9H384L384,253.9z M249.1,229.7h-47.9v-47.8h47.9V229.7z M114.2,253.9 v47.9H66.3v-47.9H114.2L114.2,253.9z M181.7,323.9v47.9h-47.9v-47.9H181.7L181.7,323.9z M114.2,371.8H66.3v-47.9h47.9V371.8z M249.1,253.9v47.9h-47.9v-47.9H249.1L249.1,253.9z M249.1,371.8h-47.9v-47.9h47.9V371.8z M181.7,253.9v47.9h-47.9v-47.9H181.7 L181.7,253.9z M181.7,181.9v47.8h-47.9v-47.8H181.7L181.7,181.9z" />
+        </symbol>
+
+        <use id="use-arrow" xlink:href="#symbol-arrow" />
+        <use id="use-calendar" xlink:href="#symbol-calendar" />
+      </svg>
+    </div>
+
+    <div>
+      HTML reference
+      <br>
+      <svg>
+        <use xlink:href="#use-arrow" />
+      </svg>
+    </div>
+
+    <div>
+      CSS reference
+      <br>
+      <div class="icon" />
+    </div>
+  </div>
+</template>
+
+<style>
+.icon {
+  /* background-color: blue;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><use xlink:href='#symbol-arrow' /></svg>"); */
+  height: 4rem;
+  position: relative;
+  width: 4rem;
+}
+
+.icon::after {
+  background: red;
+
+  /* content: url(#use-arrow); */
+
+  /* content: url("#use-arrow"); */
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><use xlink:href='#use-arrow' /></svg>");
+  position: absolute;
+  inset: 0;
+}
+</style>
