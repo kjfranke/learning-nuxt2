@@ -54,9 +54,5 @@ export default {
 
   router: {
     middleware: 'router-middleware'
-  },
-
-  stylelint: {
-    fix: true
   }
 }
