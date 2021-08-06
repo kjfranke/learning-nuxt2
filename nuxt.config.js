@@ -1,3 +1,7 @@
+// const aliasPaths = [__dirname]
+
+// console.log('aliasPaths', aliasPaths)
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -22,7 +26,11 @@ export default {
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  // components: aliasPaths.map(item => item + '/components'),
+  components: [
+    '~/components/',
+    '~/base-components/'
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [

@@ -1,5 +1,8 @@
 <template>
   <div>
+    <NuxtLink to="/components/">
+      Components
+    </NuxtLink>
     <p>
       props: testProps = {{ testProps }}
     </p>
