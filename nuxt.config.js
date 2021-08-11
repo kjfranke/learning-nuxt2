@@ -77,11 +77,7 @@ export default {
   },
 
   // https://nuxtjs.org/docs/2.x/concepts/server-side-rendering#extend-and-control-the-server
-  serverMiddleware: ['~/server-middleware/logger'],
-
-  router: {
-    middleware: 'router-middleware'
-  },
+  serverMiddleware: [],
 
   stylelint: {
     fix: true
