@@ -18,6 +18,11 @@
             Sprite solutions
           </nuxt-link>
         </li>
+        <li>
+          <nuxt-link to="/nuxt-svg-sprite-loader">
+            Nuxt svg sprite loader
+          </nuxt-link>
+        </li>
       </ul>
     </nav>
     <Nuxt />

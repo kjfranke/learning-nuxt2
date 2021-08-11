@@ -19,7 +19,7 @@
     <div>
       HTML reference
       <br>
-      <svg>
+      <svg height="40" viewBox="0 0 6.8 13.3">
         <use xlink:href="#use-arrow" />
       </svg>
     </div>

@@ -1,3 +1,5 @@
+import path from 'path'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -35,7 +37,15 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    ['~/xsarus-svg-sprite-loader/dist/index', {
+      symbolId: 'symbol-[name]',
+      extract: true,
+      esModule: false,
+      spriteFilename: 'sprite-[hash:6].svg',
+      runtimeGenerator: path.join(__dirname, '/xsarus-svg-sprite-loader/lib/runtime-generator.js')
+      // spriteModule: path.join(__dirname, '/xsarus-svg-sprite-loader/runtime/browser-sprite.build.js')
+    }]
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -47,6 +57,23 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend (config, ctx) {
+      // Excludes /assets/svg from url-loader
+      // const urlLoader = config.module.rules.find(rule => rule.loader === 'url-loader')
+      // urlLoader.exclude = /(assets\/svg)/
+
+      // // Includes /assets/svg for svg-sprite-loader
+      // config.module.rules.push({
+      //   test: /\.svg$/,
+      //   include: [
+      //     path.resolve(__dirname, 'assets/svg')
+      //   ],
+      //   use: 'svg-sprite-loader'
+      // })
+
+      // Uncomment line below to view webpack rules
+      // console.dir(config.module.rules)
+    }
   },
 
   // https://nuxtjs.org/docs/2.x/concepts/server-side-rendering#extend-and-control-the-server

@@ -1,0 +1,37 @@
+{
+  "name": "xsarus-svg-sprite-loader",
+  "version": "2.0.7",
+  "description": "Nuxt.js module for svg-sprite-loader.",
+  "keywords": [
+    "xsarus",
+    "nuxt",
+    "svg",
+    "sprite",
+    "webpack",
+    "loader",
+    "use",
+    "id"
+  ],
+  "repository": "xsarus/xsarus-svg-sprite-loader",
+  "license": "MIT",
+  "author": "Keesjan Franke <k.franke@xsarus.nl>",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "depcheck-package-name": "^2.0.0",
+    "svg-sprite-loader": "^6.0.0"
+  },
+  "devDependencies": {
+    "nuxt": "^2.13.3",
+    "output-files": "^2.0.0",
+    "with-local-tmp-dir": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
